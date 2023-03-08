@@ -1,4 +1,4 @@
-let provinces_table,provinces_type
+let provinces_table
 
 function modal_disable_province(id) {
   $('#modal-disable-province #province_id').val(id)
@@ -6,11 +6,8 @@ function modal_disable_province(id) {
 }
 
 $(document).ready(function(){
-  if ( document.getElementById('provinces_d_type') != undefined ) {
-    provinces_type = document.getElementById('provinces_d_type').value
-  }
 	provinces_table = $("#provinces_table").DataTable({
-    'ajax': `provinces?d_type=${provinces_type}`,
+    'ajax': 'provinces',
     'columns': [
     {'data': 'name'},
     {'data': 'description'},
