@@ -18,6 +18,7 @@
 //= require vendor/jquery-validate/additional-methods
 
 //= require provinces
+//= require cities
 
 $(document).on('ready', function () {
   // initialization of header
