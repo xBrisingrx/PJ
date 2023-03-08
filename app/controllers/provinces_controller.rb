@@ -10,19 +10,21 @@ class ProvincesController < ApplicationController
 
   def new
     @province = Province.new
+    @modal_title = 'Registrar nueva provincia'
   end
 
   def edit
+    @modal_title = "Actualizar datos de la provincia #{@province.name}"
   end
 
   def create
     province = Province.new(province_params)
 
     respond_to do |format|
-      if province.save
+      if @province.save
         format.json { render json: { status: :success, msg: 'Provincia agregada.' }, status: :created }
       else
-        format.json { render json: province.errors, status: :unprocessable_entity }
+        format.json { render json: @province.errors, status: :unprocessable_entity }
       end
     end
   end
