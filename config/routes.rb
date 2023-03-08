@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :provinces
+  post 'disable_province', to: 'provinces#disable', as: 'disable_province'
 end
