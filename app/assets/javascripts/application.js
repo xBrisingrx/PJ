@@ -19,6 +19,7 @@
 
 //= require provinces
 //= require cities
+//= require people
 
 $(document).on('ready', function () {
   // initialization of header
