@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :neighborhoods
   resources :provinces
   post 'disable_province', to: 'provinces#disable', as: 'disable_province'
   resources :cities
