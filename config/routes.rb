@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "people#index"
   resources :people
   post 'disable_person', to: 'people#disable', as: 'disable_person'
   resources :institution_types
